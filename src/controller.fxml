@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="gameAnchor" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+      <AnchorPane prefHeight="500.0" prefWidth="750.0" />
+      <AnchorPane fx:id="gameAnchorBase" prefHeight="634.0" prefWidth="750.0">
+         <children>
+             <ImageView fx:id="losetText" fitHeight="635.0" fitWidth="750.0" layoutX="-35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="false">
+                 <image>
+                     <Image url="@/images/boardbackground.png" />
+                 </image>
+             </ImageView>
+
+             <ImageView fx:id="dealerCard2" fitHeight="150.0" fitWidth="100.0" layoutX="150" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@/images/Back.png" />
+                 </image></ImageView>
+             <ImageView fx:id="dealerCard1" fitHeight="150.0" fitWidth="100.0" layoutX="200" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+             <Button fx:id="hitButton" layoutX="239.0" layoutY="419.0" mnemonicParsing="false" onAction="#Hit" prefHeight="18.0" prefWidth="32.0" text="Hit" />
+             <Label fx:id="playerPoints" layoutX="284.0" layoutY="404.0" text="Player:" textFill="WHITE">
+                 <font>
+                     <Font name="Arial Black" size="39.0" />
+                 </font></Label>
+             <ImageView fx:id="playerCard1" fitHeight="150.0" fitWidth="100.0" layoutX="150.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="playerCard2" fitHeight="150.0" fitWidth="100.0" layoutX="200.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="playerCard3" fitHeight="150.0" fitWidth="100.0" layoutX="250.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="playerCard4" fitHeight="150.0" fitWidth="100.0" layoutX="300.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="playerCard5" fitHeight="150.0" fitWidth="100.0" layoutX="350.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" />
+             <Button fx:id="stayButton" layoutX="150.0" layoutY="419.0" mnemonicParsing="false" onAction="#Stay" text="Stay" />
+             <ImageView fx:id="dealerCard3" fitHeight="150.0" fitWidth="200.0" layoutX="250" layoutY="44" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="dealerCard4" fitHeight="150.0" fitWidth="200.0" layoutX="300" layoutY="44" pickOnBounds="true" preserveRatio="true" />
+             <Label fx:id="dealerPoints" layoutX="460.0" layoutY="64.0" text="Dealer:" textFill="#ffffff">
+                 <font>
+                     <Font name="Arial Black" size="36.0" />
+                 </font>
+             </Label>
+             <ImageView fx:id="dealerCard5" fitHeight="150.0" fitWidth="200.0" layoutX="350.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+             <Button layoutX="53.0" layoutY="419.0" mnemonicParsing="false" onAction="#Reset" text="Reset" />
+            <ImageView fx:id="fakeDeck" fitHeight="150.0" fitWidth="200.0" layoutX="570.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url="@/images/Back.png" />
+             </image></ImageView>
+         </children></AnchorPane>
+      <Rectangle fx:id="gameOverbox" arcHeight="5.0" arcWidth="5.0" fill="#007e1b" height="134.0" layoutX="230" layoutY="180.0" stroke="BLACK" strokeType="INSIDE" width="254.0">
+         <effect>
+            <PerspectiveTransform>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </PerspectiveTransform>
+         </effect>
+      </Rectangle>
+        <Label fx:id="winText" layoutX="245" layoutY="191" prefHeight="111.0" prefWidth="254.0" text="You win!" textFill="#ffea00">
+            <font>
+                <Font size="59.0" />
+            </font>
+            <effect>
+                <PerspectiveTransform />
+            </effect>
+        </Label>
+      <Label fx:id="lostText" layoutX="240" layoutY="191" prefHeight="111.0" prefWidth="254.0" text="You Lose." textFill="WHITE">
+         <font>
+            <Font size="56.0" />
+         </font>
+         <effect>
+            <PerspectiveTransform />
+         </effect>
+      </Label>
+
+    </children>
+
+</AnchorPane>
